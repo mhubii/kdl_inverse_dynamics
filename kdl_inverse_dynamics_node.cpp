@@ -72,9 +72,6 @@ protected:
                 lbr_state->measured_torque[4], lbr_state->measured_torque[5],
                 lbr_state->measured_torque[6]);
 
-    auto intertia = kdl_chain_.getSegment(0).getInertia();
-    RCLCPP_INFO(this->get_logger(), "mass: %f", intertia.getMass());
-
     q_.data = Eigen::VectorXd::Map(lbr_state->measured_joint_position.data(),
                                    lbr_state->measured_joint_position.size());
     dq_.data.setZero();
