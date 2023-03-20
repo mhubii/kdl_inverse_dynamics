@@ -79,7 +79,7 @@ protected:
 
     kdl_chain_id_solver_->CartToJnt(q_, dq_, ddq_, f_ext_, tau_);
 
-    RCLCPP_INFO(this->get_logger(), "calucated torque: %f, %f, %f, %f, %f, %f, %f", tau_.data[0],
+    RCLCPP_INFO(this->get_logger(), "calculated torque: %f, %f, %f, %f, %f, %f, %f", tau_.data[0],
                 tau_.data[1], tau_.data[2], tau_.data[3], tau_.data[4], tau_.data[5], tau_.data[6]);
   }
 };
